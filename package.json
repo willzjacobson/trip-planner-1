@@ -1,0 +1,31 @@
+{
+  "name": "trip-planner-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e html,scss,js ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willzjacobson/trip-planner-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willzjacobson/trip-planner-1/issues"
+  },
+  "homepage": "https://github.com/willzjacobson/trip-planner-1#readme",
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.10",
+    "morgan": "^1.6.1",
+    "node-sass-middleware": "^0.9.6",
+    "nodemon": "^1.7.1",
+    "path": "^0.12.7",
+    "swig": "^1.4.2"
+  }
+}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+AND IM THE GOOD STUFF<br>
+<ul>
+{% for restaurant in allRestaurants %}
+<li>The restaurants: {{restaurant.name}} </li>
+{% endfor %}
+</ul><br>
+<!--The activities: {{ allActivities }}<br>
+The hotels: {{ allHotels }}<br>-->
+
+
+{% endblock %}
