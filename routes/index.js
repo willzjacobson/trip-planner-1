@@ -13,6 +13,7 @@ router.get("/", function(req, res, next) {
 	Promise.all(findPromises)
 	.then (function (values){
 		// console.log(values[2]);
+		
 		res.render('index', {allRestaurants: values[0], allActivities: values[1], allHotels: values[2]});
 	})
 	

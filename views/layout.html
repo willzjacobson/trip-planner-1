@@ -55,6 +55,8 @@
 function initialize_gmaps() {
     // initialize new google maps LatLng object
     var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
+    var andazLatlng = new google.maps.LatLng(40.7051609,-74.008124);
+    var capitalGrilleLatlng = new google.maps.LatLng(40.707995,-74.010258);
     // set the map options hash
     var mapOptions = {
         center: myLatlng,
@@ -66,12 +68,50 @@ function initialize_gmaps() {
     // initialize a new Google Map with the options
     var map = new google.maps.Map(map_canvas_obj, mapOptions);
     // Add the marker to the map
+
+    var hotelImage = {
+    	url: 'http://maps.google.com/mapfiles/ms/micons/lodging.png',
+    	size: new google.maps.Size(50,50),
+    	origin: new google.maps.Point(0,0),
+    	anchor: new google.maps.Point(0,32)
+    };
+
+    var restoImage = {
+    	ur`l: 'http://maps.google.com/mapfiles/ms/micons/restaurant.png',
+    	size: new google.maps.Size(50,50),
+    	origin: new google.maps.Point(0,0),
+    	anchor: new google.maps.Point(0,32)    	
+    };
+
+    var fullstackImage = {
+    	url: 'fullstackLogo.jpg',
+    	size: new google.maps.Size(100,100),
+    	origin: new google.maps.Point(0,0),
+    	anchor: new google.maps.Point(0,32)  
+    };
+
     var marker = new google.maps.Marker({
         position: myLatlng,
-        title:"Hello World!"
+        title:"Fullstack Academy!",
+        icon: fullstackImage,
+        animation: google.maps.Animation.BOUNCE
+    });
+
+    var andezMarker = new google.maps.Marker({
+        position: andazLatlng,
+        title:"Andaz Wall Street",
+        icon: hotelImage
+    });
+    var capitalGrilleMarker = new google.maps.Marker({
+        position: capitalGrilleLatlng,
+        title:"The Capital Grille",
+        icon: restoImage
     });
     // Add the marker to the map by calling setMap()
     marker.setMap(map);
+    andezMarker.setMap(map);
+    capitalGrilleMarker.setMap(map);
+
 }
 
 $(document).ready(function() {
