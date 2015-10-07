@@ -3,13 +3,13 @@
 {% block content %}
 
 <div class="row">
-	<div class="col-md-9 mapleft">
+	<div class="col-md-9 col-sm-12 mapleft">
 		
 		<div id="map-canvas"></div> <!--map -->
 
 	</div><!-- .col-md-9 -->
 
-	<div class="col-md-3 sidebar">
+	<div class="col-md-3 col-sm-12 sidebar">
 
 			<div class="row">
 				<div class="col-md-12 pulldowns">
@@ -17,19 +17,20 @@
 					<form>
 						<label>Hotels</label><br>
 						<select class="form-control">
-							 <option>1</option>
-							 <option>2</option>
-							 <option>3</option>
+							{% for hotel in allHotels %}
+							<option>{{hotel.name}} </option>
+							{% endfor %}
 						 </select>
 						 <button class="addButton"><span>+</span></button>
 					</form>
 
 					<form>
 						<label>Restaurants</label><br>
+
 						<select class="form-control">
-							 <option>1</option>
-							 <option>2</option>
-							 <option>3</option>
+							{% for restaurant in allRestaurants %}
+							<option>{{restaurant.name}}</option>
+							{% endfor %}
 						 </select>
 						 <button class="addButton"><span>+</span></button>
 					</form>
@@ -37,9 +38,9 @@
 					<form>
 						<label>Activities</label><br>
 						<select class="form-control">
-							 <option>1</option>
-							 <option>2</option>
-							 <option>3</option>
+							{% for activity in allActivities %}
+							<option>{{activity.name}} </option>
+							{% endfor %}
 						 </select>
 						 <button class="addButton"><span>+</span></button>
 					</form>
@@ -54,7 +55,7 @@
 			</div><!--.row-->
 
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 itineraries">
 					<div class="panel panel-default">
 					 <div class="panel-heading">
 					   <ul>
@@ -89,23 +90,6 @@
 	</div><!-- .col-md-3 -->
 </div><!-- .row -->
 
-
-<!-- AND IM THE GOOD STUFF<br>
-<ul>
-{% for restaurant in allRestaurants %}
-<li>The restaurants: {{restaurant.name}} </li>
-{% endfor %}
-</ul><br>
-<ul>
-{% for hotel in allHotels %}
-<li>The hotels: {{hotel.name}} </li>
-{% endfor %}
-</ul><br>
-<ul>
-{% for activity in allActivities %}
-<li>The activity: {{activity.name}} </li>
-{% endfor %}
-</ul><br> -->
 
 
 
