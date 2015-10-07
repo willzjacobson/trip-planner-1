@@ -57,6 +57,9 @@ function initialize_gmaps() {
     var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
     var andazLatlng = new google.maps.LatLng(40.7051609,-74.008124);
     var capitalGrilleLatlng = new google.maps.LatLng(40.707995,-74.010258);
+    var bouleyLatlng = new google.maps.LatLng(40.7169501,-74.0089346);
+
+
     // set the map options hash
     var mapOptions = {
         center: myLatlng,
@@ -107,10 +110,18 @@ function initialize_gmaps() {
         title:"The Capital Grille",
         icon: restoImage
     });
+    var bouleyMarker = new google.maps.Marker({
+        position: bouleyLatlng,
+        title:"Bouley",
+        icon: restoImage
+    });
+
+
     // Add the marker to the map by calling setMap()
     marker.setMap(map);
     andezMarker.setMap(map);
     capitalGrilleMarker.setMap(map);
+    bouleyMarker.setMap(map);
 
 }
 
