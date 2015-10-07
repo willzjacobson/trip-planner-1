@@ -3,49 +3,45 @@
 {% block content %}
 
 <div class="row">
-	<div class="col-md-9">
-		WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-		WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-		WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-		WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-		WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-		WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+	<div class="col-md-9 mapleft">
+		
+		<div id="map-canvas"></div> <!--map -->
+
 	</div><!-- .col-md-9 -->
 
-	<div class="col-md-3">
-		<div class="container">
+	<div class="col-md-3 sidebar">
 
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 pulldowns">
 
 					<form>
-						<label>Hotels</label>
+						<label>Hotels</label><br>
 						<select class="form-control">
 							 <option>1</option>
 							 <option>2</option>
 							 <option>3</option>
 						 </select>
-						 <button type="submit" class="btn btn-primary">+</button>
+						 <button class="addButton"><span>+</span></button>
 					</form>
 
 					<form>
-						<label>Restaurants</label>
+						<label>Restaurants</label><br>
 						<select class="form-control">
 							 <option>1</option>
 							 <option>2</option>
 							 <option>3</option>
 						 </select>
-						 <button type="submit" class="btn btn-primary">+</button>
+						 <button class="addButton"><span>+</span></button>
 					</form>
 
 					<form>
-						<label>Activities</label>
+						<label>Activities</label><br>
 						<select class="form-control">
 							 <option>1</option>
 							 <option>2</option>
 							 <option>3</option>
 						 </select>
-						 <button type="submit" class="btn btn-primary">+</button>
+						 <button class="addButton"><span>+</span></button>
 					</form>
 
 				</div><!-- .col-md-12 -->
@@ -90,8 +86,6 @@
 					</div>
 				</div><!-- .col-md-12 -->
 			</div><!--.row-->
-
-		</div><!-- .container -->
 	</div><!-- .col-md-3 -->
 </div><!-- .row -->
 

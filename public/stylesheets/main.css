@@ -1,9 +1,59 @@
 body {
   color: #000;
-  padding-top: 50px; }
+  padding-top: 10px; }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
   color: #93c0ff; }
 
 .navbar-inverse .navbar-nav > .active > a {
   color: #93c0ff; }
+
+.container {
+  width: 90%;
+  padding: 1%; }
+
+.mapleft {
+  padding: 0;
+  margin: 0; }
+
+#map-canvas {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 90vh; }
+
+.sidebar {
+  padding-top: 2%;
+  background-color: #cecece; }
+
+.pulldowns {
+  width: 84%;
+  margin: 0 8%;
+  background-color: #e5e5e5;
+  border: 0;
+  border-radius: 15px; }
+
+select.form-control {
+  width: 88%;
+  display: inline;
+  height: 25px; }
+
+.addButton {
+  display: inline;
+  border-radius: 11px;
+  height: 22px;
+  width: 22px;
+  color: white;
+  background-color: #93c0ff;
+  border: 0px;
+  margin-left: 5px;
+  position: relative;
+  bottom: 2px; }
+
+form {
+  margin-bottom: 5%; }
+
+span {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 12px; }
