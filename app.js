@@ -30,6 +30,7 @@ app.use(
 );
 
 app.use(express.static(path.join(__dirname, '/public'))); //__dirname is the folder this file is in.
+app.use('/bower_components', express.static(path.join(__dirname, '/bower_components')));
 
 app.use('/', routes);
 

@@ -6,29 +6,18 @@ var Hotel = models.Hotel;
 var Activity = models.Activity;
 var Restaurant = models.Restaurant;
 
-var foundHotels, foundActivities, foundRestaurants;
-
 router.get("/", function(req, res, next) {
 	
-	Hotel.find({}).exec()
-	.then (function (hotels){
-		foundHotels = hotels;
-		return Activity.find({}).exec();
+
+	var findPromises = [Restaurant.find({}).exec(), Activity.find({}).exec(), Hotel.find({}).exec()];
+	Promise.all(findPromises)
+	.then (function (values){
+		// console.log(values[2]);
+		res.render('index', {allRestaurants: values[0], allActivities: values[1], allHotels: values[2]});
 	})
-	.then (function (activities){
-		foundActivities = activities;
-		return Restaurant.find({}).exec();
-	})
-	.then (function (restaurants){
-		foundRestaurants = restaurants;
-	})
-	.then (function (){
-		console.log(foundRestaurants);
-  	res.render('index', {allHotels: foundHotels, allActivities: foundActivities, allRestaurants: foundRestaurants});
-	});
-	// .catch (function (err){
-	// 	console.err(err);
-	// });
+	
+	//res.render('index');
 });
+
 
 module.exports = router;

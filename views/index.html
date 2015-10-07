@@ -8,8 +8,17 @@ AND IM THE GOOD STUFF<br>
 <li>The restaurants: {{restaurant.name}} </li>
 {% endfor %}
 </ul><br>
-<!--The activities: {{ allActivities }}<br>
-The hotels: {{ allHotels }}<br>-->
+<ul>
+{% for hotel in allHotels %}
+<li>The hotels: {{hotel.name}} </li>
+{% endfor %}
+</ul><br>
+<ul>
+{% for activity in allActivities %}
+<li>The activity: {{activity.name}} </li>
+{% endfor %}
+</ul><br>
+
 
 
 {% endblock %}
